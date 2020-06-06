@@ -1,6 +1,5 @@
 import utils from '../../helpers/utils';
 import './eat.scss';
-// import petData from '../../helpers/data/petData';
 
 let full = 100;
 
