@@ -8,8 +8,8 @@ const buildPlayQuad = () => {
 
   domString += `<h3>Play</h3>
     <h4>Current strength level: ${fun}</h4>
-    <button id="superButton>Awesome Fun Times</button>
-    <button id="kindaButton>Adequate Fun Times</button>
+    <button id="superButton">Awesome Fun Times</button>
+    <button id="kindaButton">Adequate Fun Times</button>
     `;
 
   domString += '</div>';
@@ -26,7 +26,10 @@ const clickAwesomeButtonEvent = (e) => {
 const clickAdequateButtonEvent = (e) => {
   e.preventDefault();
   fun = Math.min(fun + 2, 100);
+  buildPlayQuad();
 };
 
 $('body').on('click', '#superButton', clickAwesomeButtonEvent);
 $('body').on('click', '#kindaButton', clickAdequateButtonEvent);
+
+export default { buildPlayQuad };
